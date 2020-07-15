@@ -1,21 +1,23 @@
-<a href="https://github.com/magnet2021/catbox">
+<a href="https://github.com/magnet2021/boxcat">
   <img src=".github/assets/logo.png" width="100px" align="right" />
 </a>
 
-# Catbox
+# boxcat
 
-[![Dependencies](https://img.shields.io/david/magnet2021/catbox.svg?style=flat)](https://img.shields.io/david/magnet2021/catbox.svg?style=flat)
-[![Code Size](https://img.shields.io/github/languages/code-size/magnet2021/catbox)](https://img.shields.io/github/languages/code-size/magnet2021/catbox)
-[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/magnet2021/catbox)
-[![License](https://img.shields.io/github/license/magnet2021/catbox)](https://img.shields.io/github/license/magnet2021/catbox?style=flat-square)
+[![Dependencies](https://img.shields.io/david/magnet2021/boxcat.svg?style=flat-square)](https://img.shields.io/david/magnet2021/boxcat.svg?style=flat-square)
+[![Code Size](https://img.shields.io/github/languages/code-size/magnet2021/boxcat?style=flat-square)](https://img.shields.io/github/languages/code-size/magnet2021/boxcat?style=flat-square)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/magnet2021/boxcat)
+[![License](https://img.shields.io/github/license/magnet2021/boxcat?style=flat-square)](https://img.shields.io/github/license/magnet2021/boxcat?style=flat-square)
+
+> Outsourced annotation and categorization platform for training and validating data for AI applications.
 
 ## Getting Started
 
 ### Installation
 
 ```bash
-git clone https://github.com/magnet2021/catbox.git
-cd catbox
+git clone https://github.com/magnet2021/boxcat.git
+cd boxcat
 ```
 
 Note: You will need at least NodeJS 10.18.1+, VSCode 1.44+, Yarn 1.17.3+ and MongoDB 3+. You will also need to configure .env variables before launching.
@@ -37,7 +39,7 @@ Create a file named `.env` to be able to interact with `process.env` in NodeJS.
 
 ### Usage
 
-Catbox follows the latest maintenance LTS version of Node.
+boxcat follows the latest maintenance LTS version of Node.
 
 ```bash
 yarn
