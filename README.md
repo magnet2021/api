@@ -1,4 +1,4 @@
-<a href="https://covidheroes.net/">
+<a href="https://github.com/magnet2021/catbox">
   <img src=".github/assets/logo.png" width="100px" align="right" />
 </a>
 
@@ -15,7 +15,7 @@
 
 ```bash
 git clone https://github.com/magnet2021/catbox.git
-cd covidheroes.net
+cd catbox
 ```
 
 Note: You will need at least NodeJS 10.18.1+, VSCode 1.44+, Yarn 1.17.3+ and MongoDB 3+. You will also need to configure .env variables before launching.
