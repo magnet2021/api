@@ -1,15 +1,25 @@
 import { Request, Response } from 'express';
-import { Categorization } from '../../schemas/categorization';
+import { Categorization } from '../../models/categorization';
 
 export const CategorizationController = {
   get: async (req: Request, res: Response) => {
-    Categorization.findOne({ _id: req.query.id }, (err, task) => {
-      if (err) {
-        res.boom.badImplementation(err);
-      } else {
-        res.json(task);
-      }
-    });
+    if (req.query.id) {
+      Categorization.findOne({ _id: req.query.id }, (err, task) => {
+        if (err) {
+          res.boom.badImplementation(err);
+        } else {
+          res.json(task);
+        }
+      });
+    } else {
+      Categorization.find({}, (err, task) => {
+        if (err) {
+          res.boom.badImplementation(err);
+        } else {
+          res.json(task);
+        }
+      });
+    }
   },
 
   create: (req: Request, res: Response) => {

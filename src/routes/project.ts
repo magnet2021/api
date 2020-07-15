@@ -1,6 +1,7 @@
 import { Route } from './core/route';
 import { ProjectController } from '../controllers/project/project';
 import { HTTP_METHODS } from './core/methods';
+import { Authenticate } from './../middleware/authenticate';
 
 export const PROJECT_ROUTES: Array<any> = [
   new Route({

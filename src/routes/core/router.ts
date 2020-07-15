@@ -3,9 +3,10 @@ import { Route } from './route';
 import { HTTP_METHODS } from './methods';
 import { CATEGORIZATION_ROUTES } from '../categorization';
 import { PROJECT_ROUTES } from '../project';
+import { TOKEN_ROUTES } from '../token';
 
 export class Router {
-  static ROUTES: Array<Array<Route>> = [CATEGORIZATION_ROUTES, PROJECT_ROUTES];
+  static ROUTES: Array<Array<Route>> = [CATEGORIZATION_ROUTES, PROJECT_ROUTES, TOKEN_ROUTES];
 
   public static registerRoutes(app: Express) {
     this.ROUTES.forEach((routes) => {

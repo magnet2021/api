@@ -1,9 +1,10 @@
 import { Request, Response } from 'express';
-import { Project } from '../../models/project';
+import { Token } from '../../models/token';
+import { generate } from '../../utils/generateToken';
 
-export const ProjectController = {
+export const TokenController = {
   get: async (req: Request, res: Response) => {
-    Project.findOne({ _id: req.query.id }, (err, task) => {
+    Token.findOne({ _id: req.query.id }, (err, task) => {
       if (err) {
         res.boom.badImplementation(err);
       } else {
@@ -13,14 +14,8 @@ export const ProjectController = {
   },
 
   create: (req: Request, res: Response) => {
-    const { name, type, authorID } = req.body;
-
-    const task = new Project({
-      name,
-      type,
-      authorID,
-      token: null,
-      tasks: null,
+    const task = new Token({
+      token: generate(),
     });
 
     task.save((err) => {
@@ -33,16 +28,10 @@ export const ProjectController = {
   },
 
   update: (req: Request, res: Response) => {
-    const { name, type, authorID, token, tasks } = req.body;
-
-    Project.findOneAndUpdate(
+    Token.findOneAndUpdate(
       { _id: req.body.id },
       {
-        name,
-        type,
-        authorID,
-        token,
-        tasks,
+        token: generate(),
       },
       (err) => {
         if (err) {
@@ -55,7 +44,7 @@ export const ProjectController = {
   },
 
   delete: (req: Request, res: Response) => {
-    Project.deleteOne({ _id: req.query.id }, (err) => {
+    Token.deleteOne({ _id: req.query.id }, (err) => {
       if (err) {
         res.boom.badImplementation(err);
       } else {

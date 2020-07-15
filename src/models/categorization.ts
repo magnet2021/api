@@ -26,7 +26,7 @@ export let CategorizationModelSchema: Schema = new Schema(
   { timestamps: true }
 );
 
-CategorizationModelSchema.methods.toString = function(): string {
+CategorizationModelSchema.methods.toString = (): string => {
   return JSON.stringify(this);
 };
 

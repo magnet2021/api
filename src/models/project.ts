@@ -16,7 +16,7 @@ export let ProjectModelSchema: Schema = new Schema(
   { timestamps: true }
 );
 
-ProjectModelSchema.methods.toString = function(): string {
+ProjectModelSchema.methods.toString = (): string => {
   return JSON.stringify(this);
 };
 
