@@ -15,7 +15,7 @@ export class Router {
 
         if (route.middlewares.length > 0) {
           route.middlewares.forEach((middleware) => {
-            app.use(route.url, middleware.canActivate);
+            app.use(route.url, middleware.run);
           });
         }
 
